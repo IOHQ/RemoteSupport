@@ -117,7 +117,7 @@ var command = function(data){
         
         // Expect .x and .y.
         if (cmd.mouse.x && cmd.mouse.y) 
-            cmd.mouse = cmd.mouse;
+            window.mouse = cmd.mouse;
 
         else if (cmd.mouse == 'click')
             clickMouse('left', 'click');

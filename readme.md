@@ -8,3 +8,6 @@ Keypresses within the window of the support application will be sent to the peer
 
 ## Remote Mousesends
 Clicks & Moves within the window of the support application will be sent to the peer's system and executed.
+
+## Run
+npm install && npm start
