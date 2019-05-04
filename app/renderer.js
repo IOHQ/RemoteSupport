@@ -102,15 +102,15 @@ var command = function(data){
         
         var comb = [];
 
-        console.log('key:', cmd.key);
-        if (cmd.ctrlKey)    comb.push('control');
-        if (cmd.shiftKey)   comb.push('shift');
-        if (cmd.altKey)     comb.push('alt'); 
+        console.log('key:', cmd.key.key);
+        if (cmd.key.ctrlKey)    comb.push('control');
+        if (cmd.key.shiftKey)   comb.push('shift');
+        if (cmd.key.altKey)     comb.push('alt'); 
 
         if (comb.length > 0) {
-            comb.push('@'+cmd.keyCode);
+            comb.push('@'+cmd.key.keyCode);
             ks.sendCombination(comb);
-        } else ks.sendKey('@'+cmd.keyCode);
+        } else ks.sendKey('@'+cmd.key.keyCode);
     }
 
     if (cmd.mouse) {
